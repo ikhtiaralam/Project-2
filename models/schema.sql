@@ -1,5 +1,11 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+DROP DATABASE IF EXISTS calendar_db;
+CREATE DATABASE calendar_db;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+CREATE TABLE schedule
+(
+    id INT NOT NULL AUTO_INCREMENT,
+    day VARCHAR(100) NOT NULL,
+    appointment VARCHAR(250) NOT NULL,
+    apt_time VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id)
+)
