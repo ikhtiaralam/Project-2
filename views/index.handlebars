@@ -82,6 +82,7 @@
             {{this.appointment}}</ul>
           {{/if}}
           {{/each}}
+
         </p>
         <div id="weather-0"></div>
       </div>
@@ -92,8 +93,12 @@
       <div class="card-body">
         <h5 class="card-title text-center" id="day1"></h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up
-          the bulk of the card's content.
+          {{#each calendar1}}
+          {{#if dates}}
+          <ul>{{this.tim}}
+            {{this.appointment}}</ul>
+          {{/if}}
+          {{/each}}
         </p>
         <div id="weather-8"></div>
       </div>
@@ -104,8 +109,12 @@
       <div class="card-body">
         <h5 class="card-title text-center" id="day2"></h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up
-          the bulk of the card's content.
+          {{#each calendar2}}
+          {{#if dates}}
+          <ul>{{this.tim}}
+            {{this.appointment}}</ul>
+          {{/if}}
+          {{/each}}
         </p>
         <div id="weather-16"></div>
       </div>
@@ -116,8 +125,12 @@
       <div class="card-body">
         <h5 class="card-title text-center" id="day3"></h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up
-          the bulk of the card's content.
+          {{#each calendar3}}
+          {{#if dates}}
+          <ul>{{this.tim}}
+            {{this.appointment}}</ul>
+          {{/if}}
+          {{/each}}
         </p>
         <div id="weather-24"></div>
       </div>
@@ -128,8 +141,12 @@
       <div class="card-body">
         <h5 class="card-title text-center" id="day4"></h5>
         <p class="card-text">
-          Some quick example text to build on the card title and make up
-          the bulk of the card's content.
+          {{#each calendar4}}
+          {{#if dates}}
+          <ul>{{this.tim}}
+            {{this.appointment}}</ul>
+          {{/if}}
+          {{/each}}
         </p>
         <div id="weather-32"></div>
       </div>

@@ -102,7 +102,6 @@
     var options = $("<option>");
     fullDate.text(month + "-" + dayPlus + "-" + year);
     options.text(month + "-" + dayPlus + "-" + year);
-    options.attr({ class: "day", value: i })
     $("#day" + i).append(fullDate);
     $("#dayOptions").append(options);
   }
@@ -112,11 +111,11 @@
     event.preventDefault();
 
     var newCalendar = {
-      dates: $(".day").val(),
+      dates: $("#dayOptions").val().trim(),
       app: $("#appointment").val().trim(),
       time: $("#time").val().trim()
     };
-    console.log(newCalendar)
+    console.log("date" + newCalendar.dates)
     // Send the POST request.
     $.ajax("/api/calendar", {
       type: "POST",
