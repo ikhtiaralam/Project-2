@@ -12,10 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.0.0",
-<<<<<<< HEAD
-=======
     "express": "^4.17.1",
->>>>>>> d31d87f6b94dff73548e411d7d8153fb569bee6d
     "express-handlebars": "^3.1.0",
     "handlebars-helpers": "^0.10.0",
     "is-equal": "^1.5.5",
