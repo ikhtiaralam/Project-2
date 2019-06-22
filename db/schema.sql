@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS calendar_db;
 CREATE DATABASE calendar_db;
-USE calendar_db
+USE calendar_db;
 
 CREATE TABLE schedule
 (

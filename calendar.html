@@ -9,13 +9,18 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-<<<<<<< HEAD
-    <link rel="stylesheet" href="public/asset/css/style.css" />
-=======
     <link rel="stylesheet" href="public/styles/style.css" />
->>>>>>> b537ba39c970a5abe8486c707a3324d43bcbe568
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
+    <div data-aos="flip-down"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center">
     <div class="jumbotron jumbotron-fluid">
       <div class="jumbo-container">
         <h1 class="display-4">Calendar</h1>
@@ -78,6 +83,7 @@
         <li>30</li>
         <li>31</li>
       </ul>
+    </div>
     </div>
 
     <div class="container">
@@ -184,6 +190,10 @@
         Submit
       </button>
     </form>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
