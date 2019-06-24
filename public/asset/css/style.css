@@ -108,3 +108,7 @@ body {
 form {
   width: 400px;
 }
+
+h2 {
+  font-family: 'Karla', sans-serif;
+}
