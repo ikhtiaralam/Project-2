@@ -1,7 +1,7 @@
 .jumbotron {
   background: teal;
   color: white;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'PT Serif', serif;
   text-align: center;
 }
 
@@ -107,8 +107,4 @@ body {
 
 form {
   width: 400px;
-}
-
-h1 {
-  font-family: 'Karla', sans-serif;
 }
