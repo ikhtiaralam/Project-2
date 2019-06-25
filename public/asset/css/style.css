@@ -1,8 +1,7 @@
 .jumbotron {
   background: teal;
   color: white;
-  font-family: 'PT Serif', serif;
-  text-align: center;
+  text-align: center; 
 }
 
 .col-sm {
@@ -107,4 +106,7 @@ body {
 
 form {
   width: 400px;
+}
+#color-style .glitter-default {
+    color: #90F590;
 }
