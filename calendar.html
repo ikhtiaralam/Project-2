@@ -276,14 +276,14 @@
 
     // sets date to first column and adds one for the next 6 days. dropown day also.
     for (var i = 0; i < 7; i++) {
-      var month = new Date().getMonth() + 1;
+      var currMonth = new Date().getMonth() + 1;
       var day = new Date().getDate();
       var dayPlus = day + i;
       var year = new Date().getFullYear();
       var fullDate = $("<div>");
       var options = $("<option>");
-      fullDate.text(month + "-" + dayPlus + "-" + year);
-      options.text(month + "-" + dayPlus + "-" + year);
+      fullDate.text(currMonth + "-" + dayPlus + "-" + year);
+      options.text(currMonth + "-" + dayPlus + "-" + year);
       $("#day" + i).append(fullDate);
       $("#dayOptions").append(options);
     }
@@ -314,5 +314,52 @@
       }
     }
     activeDay();
+
+    function changeMonth() {
+      var previous, next, currentMonth;
+      
+      previous = document.querySelector(".prev");
+      next = document.querySelector(".next");
+      // gets current month
+      curPrevMonth = [new Date().getMonth() - 1];
+      currentMonth = [new Date().getMonth() + 1];
+      console.log(currentMonth);
+      var selectedMonth;
+
+  
+      $(".prev").click(function() {
+       selectedMonth = curPrevMonth--
+       console.log(selectedMonth);
+
+       console.log(month[selectedMonth]);
+
+          
+          // lastMonth = month[new Date().getMonth() - 1]      
+            $('#month').text(month[selectedMonth]);
+        
+      
+       
+      
+      });
+      
+      
+
+      $(".next").click(function() {
+        selectedMonth = currentMonth++
+       console.log(selectedMonth);
+
+       console.log(month[selectedMonth]);
+
+          
+          // lastMonth = month[new Date().getMonth() - 1]      
+            $('#month').text(month[selectedMonth]);
+           
+      });
+    
+     
+    }
+    changeMonth();
+
+
   </script>
 </html>
