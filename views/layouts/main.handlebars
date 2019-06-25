@@ -21,20 +21,19 @@
   AOS.init();
 </script>
 <script type="text/javascript">
-  var granimInstance = new Granim({
-      element: '#canvas-basic',
-      direction: 'left-right',
-      isPausedWhenNotInView: true,
-      states: {
-        "default-state": {
-          gradients: [
-            ['#ff9966', '#ff5e62'],
-            ['#00F260', '#0575E6'],
-            ['#e1eec3', '#f05053']
-          ]
-        }
+  var secondGranim = new Granim({
+    element: "#jumbotron",
+    name: "second-gradient",
+    elToSetClassOn: ".wrapper",
+    direction: "top-bottom",
+    opacity: [1, 1],
+    states: {
+      "default-state": {
+        gradients: [["#9C27B0", "#E91E63"], ["#009688", "#8BC34A"]],
+        transitionSpeed: 2000
       }
-    });
+    }
+  });
 
   // This is our API key
   var APIKey = "40cae4c09ea811068014399388bb357e";
