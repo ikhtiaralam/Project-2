@@ -23,19 +23,7 @@
 <script src="granim.min.js"></script>
 <script type="text/javascript">
 
-  var granimInstance = new Granim({
-    element: '#granim-canvas',
-    name: 'granim',
-    opacity: [1, 1],
-    states: {
-      "default-state": {
-        gradients: [
-          ['#834D9B', '#D04ED6'],
-          ['#1CD8D2', '#93EDC7']
-        ]
-      }
-    }
-  });
+
 
   // This is our API key
   var APIKey = "40cae4c09ea811068014399388bb357e";
@@ -172,6 +160,20 @@
     }
   }
   activeDay();
+
+  var granimInstance = new Granim({
+    element: '#granim-canvas',
+    name: 'granim',
+    opacity: [1, 1],
+    states: {
+      "default-state": {
+        gradients: [
+          ['#834D9B', '#D04ED6'],
+          ['#1CD8D2', '#93EDC7']
+        ]
+      }
+    }
+  });
 </script>
 
 </html>
