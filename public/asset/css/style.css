@@ -10,13 +10,13 @@
     #5f0b58,
     #5f0b2c,
     #a83715,
-    #2e2812
+    #110e02
   );
   background-size: 1600% 1600%;
 
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
+  -webkit-animation: AnimationName 36s ease infinite;
+  -moz-animation: AnimationName 36s ease infinite;
+  animation: AnimationName 36s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
@@ -159,13 +159,13 @@ body {
     #5f0b58,
     #5f0b2c,
     #a83715,
-    #2e2812
+    #110e02
   );
   background-size: 1600% 1600%;
 
-  -webkit-animation: AnimationName 30s ease infinite;
-  -moz-animation: AnimationName 30s ease infinite;
-  animation: AnimationName 30s ease infinite;
+  -webkit-animation: AnimationName 36s ease infinite;
+  -moz-animation: AnimationName 36s ease infinite;
+  animation: AnimationName 36s ease infinite;
 }
 
 form {
