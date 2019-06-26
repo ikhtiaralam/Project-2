@@ -25,7 +25,7 @@
     >
       <div class="jumbotron jumbotron-fluid">
         <div class="jumbo-container">
-          <h1 class="display-4">Calendar</h1>
+          <h1 class="display-4">PlanIT</h1>
           <p class="lead">Plan your day the smart way.</p>
         </div>
       </div>
@@ -95,8 +95,7 @@
             <div class="card-body">
               <h5 class="card-title text-center" id="day0"></h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Schedule
               </p>
               <div id="weather-0"></div>
             </div>
@@ -107,8 +106,7 @@
             <div class="card-body">
               <h5 class="card-title text-center" id="day1"></h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Schedule
               </p>
               <div id="weather-8"></div>
             </div>
@@ -119,8 +117,7 @@
             <div class="card-body">
               <h5 class="card-title text-center" id="day2"></h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Schedule
               </p>
               <div id="weather-16"></div>
             </div>
@@ -131,8 +128,7 @@
             <div class="card-body">
               <h5 class="card-title text-center" id="day3"></h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Schedule
               </p>
               <div id="weather-24"></div>
             </div>
@@ -143,8 +139,7 @@
             <div class="card-body">
               <h5 class="card-title text-center" id="day4"></h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Schedule
               </p>
               <div id="weather-32"></div>
             </div>
@@ -155,8 +150,7 @@
             <div class="card-body">
               <h5 class="card-title text-center" id="day5"></h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Schedule
               </p>
             </div>
           </div>
@@ -166,8 +160,7 @@
             <div class="card-body">
               <h5 class="card-title text-center" id="day6"></h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Schedule
               </p>
             </div>
           </div>
@@ -192,13 +185,18 @@
         Submit
       </button>
     </form>
+   
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
     </script>
   </body>
+  
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript">
+    <script type="text/javascript">
     // This is our API key
     var APIKey = "40cae4c09ea811068014399388bb357e";
 
@@ -315,51 +313,33 @@
     }
     activeDay();
 
-    function changeMonth() {
-      var previous, next, currentMonth;
-      
-      previous = document.querySelector(".prev");
-      next = document.querySelector(".next");
-      // gets current month
-      curPrevMonth = [new Date().getMonth() - 1];
-      currentMonth = [new Date().getMonth() + 1];
-      console.log(currentMonth);
-      var selectedMonth;
-
-  
-      $(".prev").click(function() {
-       selectedMonth = curPrevMonth--
-       console.log(selectedMonth);
-
-       console.log(month[selectedMonth]);
-
-          
-          // lastMonth = month[new Date().getMonth() - 1]      
-            $('#month').text(month[selectedMonth]);
-        
-      
-       
-      
-      });
-      
-      
-
-      $(".next").click(function() {
-        selectedMonth = currentMonth++
-       console.log(selectedMonth);
-
-       console.log(month[selectedMonth]);
-
-          
-          // lastMonth = month[new Date().getMonth() - 1]      
-            $('#month').text(month[selectedMonth]);
-           
-      });
-    
-     
+    // changes from current to next month
+    function nextMonth() {
+      var selectedMonthIndex = month.indexOf($('#month').text());
+      var nextMonthIndex;
+      if(selectedMonthIndex < 11) {
+        nextMonthIndex = selectedMonthIndex + 1;
+        $('#month').text(month[nextMonthIndex]);
+      }
     }
-    changeMonth();
+    // changes from current to prev month
+    function prevMonth() {
+      var selectedMonthIndex = month.indexOf($('#month').text());
+      var prevMonthIndex;
+ 
+      if(selectedMonthIndex >= 0) {
+        prevMonthIndex = selectedMonthIndex - 1;
+        $('#month').text(month[prevMonthIndex]);
+      }
+    }
 
+    $('.prev').on('click', prevMonth);
+
+    $('.next').on('click', nextMonth);
+
+
+   
+ 
 
   </script>
 </html>
