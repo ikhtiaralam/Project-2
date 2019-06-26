@@ -1,5 +1,5 @@
 .jumbotron {
-  color: black;
+  color: white;
   text-align: center;
   background: linear-gradient(270deg, #246655, #3fa0bd, #853fbd, #000000);
   background-size: 800% 800%;
@@ -64,7 +64,7 @@ body {
 .month {
   padding: 25px 25px;
   width: 100%;
-  background: teal;
+  background: black;
   text-align: center;
 }
 
@@ -127,8 +127,12 @@ body {
 /* Highlight the "current" day */
 .active {
   padding: 5px;
-  background: #1abc9c;
   color: white !important;
+  background: linear-gradient(270deg, #246655, #3fa0bd, #853fbd, #000000);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 36s ease infinite;
+  animation: AnimationName 36s ease infinite;
 }
 
 form {
