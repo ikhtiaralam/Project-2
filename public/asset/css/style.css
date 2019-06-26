@@ -1,41 +1,41 @@
 .jumbotron {
-  color: white;
+  color: black;
   text-align: center;
-  background-color: red;
-  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
-  animation-name: example;
-  animation-duration: 100s;
+  background: linear-gradient(
+    270deg,
+    #246655,
+    #3fa0bd,
+    #3f63bd,
+    #853fbd,
+    #bd3f8c,
+    #bd3f44,
+    #bd8e3f,
+    #a4bd3f
+  );
+  -webkit-animation: AnimationName 31s ease infinite;
+  animation: AnimationName 31s ease infinite;
 }
 
-@-webkit-keyframes example {
+@-webkit-keyframes AnimationName {
   0% {
-    background-color: red;
-  }
-  25% {
-    background-color: yellow;
+    background-position: 0% 50%;
   }
   50% {
-    background-color: blue;
+    background-position: 100% 50%;
   }
   100% {
-    background-color: green;
+    background-position: 0% 50%;
   }
 }
-
-/* Standard syntax */
-@keyframes example {
+@keyframes AnimationName {
   0% {
-    background-color: red;
-  }
-  25% {
-    background-color: yellow;
+    background-position: 0% 50%;
   }
   50% {
-    background-color: blue;
+    background-position: 100% 50%;
   }
   100% {
-    background-color: green;
+    background-position: 0% 50%;
   }
 }
 
@@ -46,7 +46,7 @@
 }
 
 .card-title {
-  background: teal;
+  background: black;
   color: white;
 }
 
