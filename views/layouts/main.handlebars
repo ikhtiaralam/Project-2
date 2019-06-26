@@ -271,6 +271,7 @@
     if (selectedMonthIndex < 11) {
       nextMonthIndex = selectedMonthIndex + 1;
       $('#month').text(month[nextMonthIndex]);
+      console.log(nextMonth)
     }
   }
   // changes from current to prev month
@@ -281,13 +282,13 @@
     if (selectedMonthIndex >= 0) {
       prevMonthIndex = selectedMonthIndex - 1;
       $('#month').text(month[prevMonthIndex]);
+      console.log(prevMonth)
     }
   }
 
   $('.prev').on('click', prevMonth);
 
   $('.next').on('click', nextMonth);
-
 
 
 
