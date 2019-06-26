@@ -161,7 +161,7 @@
   }
   activeDay();
 
-  var granimInstance = new Granim({
+  /*var granimInstance = new Granim({
     element: '#granim-canvas',
     name: 'granim',
     opacity: [1, 1],
@@ -174,6 +174,112 @@
       }
     }
   });
+  */
+
+  var queryURL =
+    "https://calendarific.com/api/v2/holidays?&api_key=9d3def65b84d16cc0bf7eccf0578e5945f7c0c9f&country=US&year=2019&location=US";
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function (result) {
+    console.log(result);
+    console.log(queryURL);
+    for (var h = 0; h < 317; h++) {
+      var all =
+        result.response.holidays[h].name +
+        result.response.holidays[h].date.datetime.month +
+        "-" +
+        result.response.holidays[h].date.datetime.day +
+        "-" +
+        result.response.holidays[h].date.datetime.year;
+      // console.log(all);
+      // var myjson = JSON.stringify(all);
+      // console.log(myjson);
+      // function myfunction() {
+      //   var n = myjson.includes(string);
+      //   console.log(n);
+      // }
+      // myfunction();
+    }
+    for (var i = 0; i < 317; i++) {
+      // console.log(
+      //   result.response.holidays[i].date.iso,
+      //   result.response.holidays[i].name
+      // );
+      var month = new Date().getMonth() + 1;
+      var day = new Date().getDate();
+      var dayPlus = day + i;
+      var year = new Date().getFullYear();
+      var fullday = month + "-" + day + "-" + year;
+      var fullday1 = month + "-" + (day + 1) + "-" + year;
+      var fullday2 = month + "-" + (day + 2) + "-" + year;
+      var fullday3 = month + "-" + (day + 3) + "-" + year;
+      var fullday4 = month + "-" + (day + 4) + "-" + year;
+      // console.log(fullday);
+      var holidays = result.response.holidays[i].name;
+      var holDate =
+        result.response.holidays[i].date.datetime.month +
+        "-" +
+        result.response.holidays[i].date.datetime.day +
+        "-" +
+        result.response.holidays[i].date.datetime.year;
+      console.log("fulldate" + fullday, holDate);
+      if (fullday === holDate) {
+        console.log(true);
+        var appearHol = $("#holiday-0");
+        var holiday = $("<div>");
+        holiday.append(holidays);
+        appearHol.append(holiday);
+      }
+      if (fullday1 === holDate) {
+        console.log(true);
+        var appearHol = $("#holiday-1");
+        var holiday = $("<div>");
+        holiday.append(holidays);
+        appearHol.append(holiday);
+      }
+      if (fullday2 === holDate) {
+        console.log(true);
+        var appearHol = $("#holiday-2");
+        var holiday = $("<div>");
+        holiday.append(holidays);
+        appearHol.append(holiday);
+      }
+      if (fullday3 === holDate) {
+        console.log(true);
+        var appearHol = $("#holiday-3");
+        var holiday = $("<div>");
+        holiday.append(holidays);
+        appearHol.append(holiday);
+      }
+      if (fullday4 === holDate) {
+        console.log(true);
+        var appearHol = $("#holiday-4");
+        var holiday = $("<div>");
+        holiday.append(holidays);
+        appearHol.append(holiday);
+      }
+      // var appearHol = $("#holiday-1");
+      // var holiday = $("<div>");
+      // holiday.append(holidays);
+      // appearHol.append(holiday);
+    }
+    // holiday.attr("holiday", result.response.holidays[i].name);
+    // holiday.attr(
+    //   "date",
+    //   result.response.holidays[i].date.datetime.month +
+    //     result.response.holidays[i].date.datetime.day +
+    //     result.response.holidays[i].date.datetime.year
+    // );
+    // var hol =
+    //   result.response.holidays[i].date.datetime.month +
+    //   "-" +
+    //   result.response.holidays[i].date.datetime.day +
+    //   "-" +
+    //   result.response.holidays[i].date.datetime.year;
+    // console.log(hol);
+  });
+
 </script>
 
 </html>
