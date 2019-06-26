@@ -264,6 +264,34 @@
     // console.log(hol);
   });
 
+  // changes from current to next month
+  function nextMonth() {
+    var selectedMonthIndex = month.indexOf($('#month').text());
+    var nextMonthIndex;
+    if (selectedMonthIndex < 11) {
+      nextMonthIndex = selectedMonthIndex + 1;
+      $('#month').text(month[nextMonthIndex]);
+    }
+  }
+  // changes from current to prev month
+  function prevMonth() {
+    var selectedMonthIndex = month.indexOf($('#month').text());
+    var prevMonthIndex;
+
+    if (selectedMonthIndex >= 0) {
+      prevMonthIndex = selectedMonthIndex - 1;
+      $('#month').text(month[prevMonthIndex]);
+    }
+  }
+
+  $('.prev').on('click', prevMonth);
+
+  $('.next').on('click', nextMonth);
+
+
+
+
+
 </script>
 
 </html>
